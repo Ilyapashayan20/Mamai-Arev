@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Dosis", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.styled{
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffea00;
+}
+
+.modal-animation-enter-active,
+.modal-animation-leave-active {
+  transition: opacity 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+}
+.modal-animation-enter-from,
+.modal-animation-leave-to {
+  opacity: 0;
+}
+.modal-animation-inner-enter-active {
+  transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02) 0.15s;
+}
+.modal-animation-inner-leave-active {
+  transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+}
+.modal-animation-inner-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.modal-animation-inner-leave-to {
+  transform: scale(0.8);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+
+
+
+.toast-enter-active {
+  transition: all 300ms ease-out;
+}
+
+.toast-enter-from {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.toast-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-leave-active {
+  transition: all 300ms ease-in;
+}
+
+.toast-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+.toast-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
